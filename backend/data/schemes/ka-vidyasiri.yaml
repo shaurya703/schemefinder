@@ -1,0 +1,48 @@
+id: ka-vidyasiri
+name: "Vidyasiri — Food and Accommodation Assistance (Karnataka)"
+category: scholarship
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Backward Classes Welfare Department"
+description: >
+  Monthly allowance of Rs 1,500 (for 10 months a year) for backward-class
+  post-matric students in Karnataka who could not get a seat in a
+  government hostel, to help with food and accommodation while studying
+  away from home.
+benefits:
+  - type: financial
+    summary: "₹1,500/month for 10 months towards food and accommodation"
+    amount_max: 15000
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: category
+      op: eq
+      value: obc
+      label: "Karnataka backward classes (Category-1, 2A, 3A, 3B)"
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [higher_secondary, diploma_iti, undergraduate, postgraduate, doctorate]
+      label: "Studying a post-matric course"
+    - field: annual_income
+      op: lte
+      value: 250000
+  self_check:
+    - "You applied for but were not allotted a government hostel seat"
+    - "You study in a recognised institution away from your home town"
+required_documents:
+  - "Caste and income certificate"
+  - "Admission proof"
+  - "Hostel non-allotment declaration"
+  - "Aadhaar-linked bank account"
+application_url: "https://ssp.postmatric.karnataka.gov.in/"
+source_urls:
+  - "https://bcwd.karnataka.gov.in/"
+  - "https://ssp.postmatric.karnataka.gov.in/"
+last_verified: "2026-06-11"
+tags: [karnataka, student, obc, scholarship]

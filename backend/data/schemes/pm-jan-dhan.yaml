@@ -1,0 +1,30 @@
+id: pm-jan-dhan
+name: "PM Jan Dhan Yojana (Zero-Balance Bank Account)"
+category: financial
+level: central
+state: null
+ministry: "Ministry of Finance"
+description: >
+  A zero-balance savings account with a free RuPay debit card that
+  carries Rs 2 lakh accident insurance, plus an overdraft facility up
+  to Rs 10,000 for accounts in good standing. The gateway to receiving
+  most government benefits directly.
+benefits:
+  - type: service
+    summary: "Zero-balance account, RuPay card with ₹2 lakh accident cover, overdraft up to ₹10,000"
+    amount_max: null
+eligibility:
+  rules:
+    - field: age
+      op: gte
+      value: 10
+  self_check:
+    - "You do not already have a bank account (an existing basic account can be converted)"
+required_documents:
+  - "Aadhaar card (or other officially valid document)"
+  - "Passport-size photograph"
+application_url: "https://pmjdy.gov.in/"
+source_urls:
+  - "https://pmjdy.gov.in/"
+last_verified: "2026-06-11"
+tags: [financial_inclusion, banking]

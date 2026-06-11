@@ -1,0 +1,37 @@
+id: pm-mudra
+name: "PM Mudra Yojana (Micro Business Loans)"
+category: business
+level: central
+state: null
+ministry: "Ministry of Finance"
+description: >
+  Collateral-free loans for non-farm micro and small enterprises through
+  banks, NBFCs and microfinance institutions. Four slabs: Shishu (up to
+  Rs 50,000), Kishor (to Rs 5 lakh), Tarun (to Rs 10 lakh) and Tarun Plus
+  (to Rs 20 lakh for borrowers who repaid an earlier Tarun loan).
+benefits:
+  - type: credit
+    summary: "Collateral-free business loans up to ₹10 lakh (₹20 lakh under Tarun Plus)"
+    amount_max: 2000000
+eligibility:
+  rules:
+    - field: age
+      op: gte
+      value: 18
+    - field: is_entrepreneur
+      op: eq
+      value: true
+  self_check:
+    - "The business is a non-corporate, non-farm micro or small enterprise (manufacturing, trading, services, or allied agri activities)"
+    - "You are not a defaulter to any bank or financial institution"
+required_documents:
+  - "Identity and address proof (Aadhaar)"
+  - "Business plan / quotation of machinery"
+  - "Proof of business existence (for running units)"
+  - "Bank account statements"
+application_url: "https://www.mudra.org.in/"
+source_urls:
+  - "https://www.mudra.org.in/"
+  - "https://www.jansamarth.in/"
+last_verified: "2026-06-11"
+tags: [entrepreneur, credit, msme]

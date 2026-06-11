@@ -1,0 +1,35 @@
+id: ka-raitha-shakti
+name: "Raitha Shakti (Karnataka Diesel Subsidy)"
+category: agriculture
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Agriculture Department"
+description: >
+  Diesel subsidy for Karnataka farmers paid directly to their bank
+  account: Rs 250 per acre per year (up to 5 acres) to offset the fuel
+  cost of farm machinery, based on land records in the FRUITS farmer
+  registry.
+benefits:
+  - type: subsidy
+    summary: "₹250 per acre per year (up to 5 acres) as direct transfer"
+    amount_max: 1250
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: is_farmer
+      op: eq
+      value: true
+  self_check:
+    - "You are registered in the FRUITS farmer registry with your land records linked"
+required_documents:
+  - "FRUITS ID / farmer registration"
+  - "Land records (RTC)"
+  - "Aadhaar-linked bank account"
+application_url: "https://fruits.karnataka.gov.in/"
+source_urls:
+  - "https://raitamitra.karnataka.gov.in/"
+  - "https://fruits.karnataka.gov.in/"
+last_verified: "2026-06-11"
+tags: [karnataka, farmer, subsidy]

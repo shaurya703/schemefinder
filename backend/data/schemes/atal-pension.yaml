@@ -1,0 +1,33 @@
+id: atal-pension
+name: "Atal Pension Yojana (APY)"
+category: pension
+level: central
+state: null
+ministry: "Ministry of Finance"
+description: >
+  Guaranteed pension scheme aimed at unorganised-sector workers. You
+  contribute monthly until age 60 and then receive a guaranteed pension
+  of Rs 1,000 to Rs 5,000 per month, with the same amount to your spouse
+  after you, and the corpus to your nominee.
+benefits:
+  - type: financial
+    summary: "Guaranteed pension of ₹1,000–₹5,000 per month from age 60"
+    amount_max: 60000
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [18, 40]
+  self_check:
+    - "You have a savings bank or post-office account with auto-debit enabled"
+    - "You are not an income-tax payer (mandatory for joining since October 2022)"
+required_documents:
+  - "Aadhaar card"
+  - "Savings bank account"
+  - "Mobile number"
+application_url: "https://www.jansuraksha.gov.in/"
+source_urls:
+  - "https://www.jansuraksha.gov.in/"
+  - "https://www.npscra.nsdl.co.in/"
+last_verified: "2026-06-11"
+tags: [pension, unorganised_worker]

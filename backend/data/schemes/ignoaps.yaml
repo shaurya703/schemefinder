@@ -1,0 +1,34 @@
+id: ignoaps
+name: "Indira Gandhi National Old Age Pension (IGNOAPS)"
+category: pension
+level: central
+state: null
+ministry: "Ministry of Rural Development"
+description: >
+  Monthly pension for senior citizens from below-poverty-line households:
+  Rs 200 per month from the centre for ages 60–79 and Rs 500 from age 80,
+  with most states adding a top-up that takes the total to Rs 1,000 or
+  more per month.
+benefits:
+  - type: financial
+    summary: "₹200–₹500/month central pension plus state top-up (total varies by state)"
+    amount_max: 6000
+eligibility:
+  rules:
+    - field: age
+      op: gte
+      value: 60
+    - field: is_bpl
+      op: eq
+      value: true
+  self_check: []
+required_documents:
+  - "Age proof"
+  - "BPL card"
+  - "Aadhaar card"
+  - "Bank/post-office account"
+application_url: "https://nsap.nic.in/"
+source_urls:
+  - "https://nsap.nic.in/"
+last_verified: "2026-06-11"
+tags: [senior_citizen, pension, bpl]

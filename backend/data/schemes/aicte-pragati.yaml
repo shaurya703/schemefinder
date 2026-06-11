@@ -1,0 +1,43 @@
+id: aicte-pragati
+name: "AICTE Pragati Scholarship for Girls"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Education (AICTE)"
+description: >
+  Rs 50,000 per year for girl students pursuing a technical diploma or
+  degree (engineering, pharmacy, architecture and similar) in an
+  AICTE-approved institution. Up to two girls per family can receive it.
+benefits:
+  - type: financial
+    summary: "₹50,000 per year for tuition and incidentals through the course"
+    amount_max: 50000
+eligibility:
+  rules:
+    - field: gender
+      op: eq
+      value: female
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [diploma_iti, undergraduate]
+      label: "Pursuing a technical diploma or degree"
+    - field: annual_income
+      op: lte
+      value: 800000
+  self_check:
+    - "Your institution and course are AICTE-approved, and you were admitted in the first year (or second year via lateral entry)"
+    - "Not more than two girls from your family are availing this scholarship"
+required_documents:
+  - "Income certificate"
+  - "Class 10 and 12 marksheets"
+  - "Admission letter from AICTE-approved institution"
+  - "Aadhaar-seeded bank account"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://www.aicte-india.org/schemes/students-development-schemes"
+  - "https://scholarships.gov.in/"
+last_verified: "2026-06-11"
+tags: [student, women, scholarship, technical]

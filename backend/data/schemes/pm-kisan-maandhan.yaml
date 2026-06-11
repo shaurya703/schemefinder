@@ -1,0 +1,39 @@
+id: pm-kisan-maandhan
+name: "PM Kisan Maandhan Yojana (Farmer Pension)"
+category: pension
+level: central
+state: null
+ministry: "Ministry of Agriculture and Farmers Welfare"
+description: >
+  Voluntary contributory pension for small and marginal farmers. Pay Rs 55
+  to Rs 200 per month (depending on joining age) until age 60, and the
+  government matches your contribution; from 60 you receive a guaranteed
+  pension of Rs 3,000 per month.
+benefits:
+  - type: financial
+    summary: "Guaranteed ₹3,000 monthly pension after age 60; government matches your contribution"
+    amount_max: 36000
+eligibility:
+  rules:
+    - field: is_farmer
+      op: eq
+      value: true
+    - field: age
+      op: between
+      value: [18, 40]
+    - field: land_holding_acres
+      op: lte
+      value: 5
+      label: "Small or marginal farmer: cultivable land up to 2 hectares (about 5 acres)"
+  self_check:
+    - "Not covered under EPFO, ESIC or NPS, and not an income-tax payer"
+    - "Not already enrolled in PM Shram Yogi Maandhan or the traders' pension scheme"
+required_documents:
+  - "Aadhaar card"
+  - "Bank account / savings passbook"
+  - "Land records showing holding up to 2 hectares"
+application_url: "https://maandhan.in/"
+source_urls:
+  - "https://maandhan.in/"
+last_verified: "2026-06-11"
+tags: [farmer, pension]

@@ -1,0 +1,38 @@
+id: pmegp
+name: "Prime Minister's Employment Generation Programme (PMEGP)"
+category: business
+level: central
+state: null
+ministry: "Ministry of Micro, Small and Medium Enterprises"
+description: >
+  Subsidy for setting up a new micro-enterprise. The government pays
+  15–25% of the project cost in urban areas and 25–35% in rural areas
+  (higher rates for SC/ST, OBC, minorities, women and other special
+  categories), with projects up to Rs 50 lakh in manufacturing and
+  Rs 20 lakh in services.
+benefits:
+  - type: subsidy
+    summary: "Margin-money subsidy of 15–35% on projects up to ₹50 lakh (manufacturing) / ₹20 lakh (services)"
+    amount_max: 1750000
+eligibility:
+  rules:
+    - field: age
+      op: gte
+      value: 18
+    - field: is_entrepreneur
+      op: eq
+      value: true
+  self_check:
+    - "The unit is new — PMEGP does not fund existing or already-assisted units"
+    - "For manufacturing projects above ₹10 lakh or service projects above ₹5 lakh, you have passed at least class 8"
+required_documents:
+  - "Aadhaar card and photograph"
+  - "Project report"
+  - "Caste / special-category certificate (if applicable)"
+  - "Education certificate (for larger projects)"
+application_url: "https://www.kviconline.gov.in/pmegpeportal/"
+source_urls:
+  - "https://www.kviconline.gov.in/pmegpeportal/"
+  - "https://msme.gov.in/"
+last_verified: "2026-06-11"
+tags: [entrepreneur, subsidy, msme]

@@ -1,0 +1,36 @@
+id: ddu-gky
+name: "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY)"
+category: skills
+level: central
+state: null
+ministry: "Ministry of Rural Development"
+description: >
+  Free residential skill training with guaranteed placement support for
+  poor rural youth. Training, food, accommodation and uniforms are fully
+  funded; the upper age limit relaxes to 45 for women and other special
+  groups.
+benefits:
+  - type: service
+    summary: "Fully funded residential skill training with assured placement effort"
+    amount_max: null
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [15, 35]
+      label: "Aged 15–35 (up to 45 for women, persons with disabilities and other special groups)"
+    - field: area
+      op: eq
+      value: rural
+  self_check:
+    - "From a poor rural household (priority to families on the SECC deprivation list, MGNREGA worker families, BPL ration-card holders)"
+required_documents:
+  - "Aadhaar card"
+  - "Proof of rural residence"
+  - "BPL card / MGNREGA card / SECC listing (if available)"
+application_url: "https://ddugky.gov.in/"
+source_urls:
+  - "https://ddugky.gov.in/"
+  - "https://rural.gov.in/"
+last_verified: "2026-06-11"
+tags: [youth, rural, skills, training]

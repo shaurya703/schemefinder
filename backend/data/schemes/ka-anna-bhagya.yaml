@@ -1,0 +1,33 @@
+id: ka-anna-bhagya
+name: "Anna Bhagya (Karnataka)"
+category: social_welfare
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Food, Civil Supplies and Consumer Affairs"
+description: >
+  Ten kilograms of foodgrain per person per month for priority (BPL)
+  and Antyodaya households in Karnataka — 5 kg from the central PMGKAY
+  plus the state's additional 5 kg, currently paid partly as cash
+  transfer.
+benefits:
+  - type: in_kind
+    summary: "10 kg foodgrain per person/month (part paid as direct cash transfer)"
+    amount_max: null
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: is_bpl
+      op: eq
+      value: true
+      label: "Household holds a BPL (priority) or Antyodaya ration card"
+  self_check: []
+required_documents:
+  - "BPL / Antyodaya ration card"
+  - "Aadhaar card"
+application_url: "https://ahara.kar.nic.in/"
+source_urls:
+  - "https://ahara.kar.nic.in/"
+last_verified: "2026-06-11"
+tags: [karnataka, food_security, bpl, guarantee]

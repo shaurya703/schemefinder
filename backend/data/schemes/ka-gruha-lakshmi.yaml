@@ -1,0 +1,35 @@
+id: ka-gruha-lakshmi
+name: "Gruha Lakshmi (Karnataka)"
+category: women_child
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Department of Women and Child Development"
+description: >
+  Rs 2,000 per month paid directly to the woman head of every eligible
+  household in Karnataka, identified from the ration card. One of the
+  state's five guarantee schemes.
+benefits:
+  - type: financial
+    summary: "₹2,000 per month to the woman head of household"
+    amount_max: 24000
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: gender
+      op: eq
+      value: female
+  self_check:
+    - "You are listed as the head of family on an APL or BPL ration card"
+    - "Neither you nor your husband files income tax or GST returns"
+required_documents:
+  - "Ration card"
+  - "Aadhaar card (linked to bank account)"
+  - "Bank account details"
+application_url: "https://sevasindhugs.karnataka.gov.in/"
+source_urls:
+  - "https://sevasindhugs.karnataka.gov.in/"
+  - "https://dwcd.karnataka.gov.in/"
+last_verified: "2026-06-11"
+tags: [women, karnataka, dbt, guarantee]

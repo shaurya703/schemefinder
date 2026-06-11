@@ -1,0 +1,31 @@
+id: pmgkay
+name: "PM Garib Kalyan Anna Yojana (Free Foodgrains)"
+category: social_welfare
+level: central
+state: null
+ministry: "Ministry of Consumer Affairs, Food and Public Distribution"
+description: >
+  Five kilograms of free foodgrains per person per month for all
+  households covered under the National Food Security Act — Antyodaya
+  (AAY) and Priority (PHH) ration-card holders — extended until the end
+  of 2028.
+benefits:
+  - type: in_kind
+    summary: "5 kg free foodgrains per person per month through the ration shop"
+    amount_max: null
+eligibility:
+  rules:
+    - field: is_bpl
+      op: eq
+      value: true
+      label: "Household holds an Antyodaya (AAY) or Priority (PHH) ration card"
+  self_check: []
+required_documents:
+  - "Ration card (AAY or PHH)"
+  - "Aadhaar (for ePoS authentication)"
+application_url: "https://nfsa.gov.in/"
+source_urls:
+  - "https://nfsa.gov.in/"
+  - "https://dfpd.gov.in/"
+last_verified: "2026-06-11"
+tags: [food_security, bpl, ration]

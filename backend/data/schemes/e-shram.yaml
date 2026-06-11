@@ -1,0 +1,39 @@
+id: e-shram
+name: "e-Shram (Unorganised Workers Registration)"
+category: social_welfare
+level: central
+state: null
+ministry: "Ministry of Labour and Employment"
+description: >
+  A national registry for unorganised workers — construction workers,
+  street vendors, domestic workers, agricultural labourers, gig workers
+  and similar. Registration is free, gives a universal e-Shram card, and
+  unlocks accident insurance of Rs 2 lakh plus easier access to welfare
+  schemes targeted at workers.
+benefits:
+  - type: insurance_cover
+    summary: "₹2 lakh accidental death/disability cover (₹1 lakh partial) for registered workers"
+    amount_max: 200000
+  - type: service
+    summary: "Universal worker ID recognised across central and state welfare schemes"
+    amount_max: null
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [16, 59]
+    - field: occupation
+      op: in
+      value: [agricultural_labourer, construction_worker, street_vendor, artisan, self_employed, other]
+      label: "Working in the unorganised sector (labourer, vendor, artisan, domestic/gig/self-employed work)"
+  self_check:
+    - "You are not a member of EPFO or ESIC, and not an income-tax payer"
+required_documents:
+  - "Aadhaar card (linked to mobile)"
+  - "Bank account details"
+application_url: "https://eshram.gov.in/"
+source_urls:
+  - "https://eshram.gov.in/"
+  - "https://labour.gov.in/"
+last_verified: "2026-06-11"
+tags: [worker, unorganised_worker, insurance]

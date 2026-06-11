@@ -1,0 +1,32 @@
+id: ka-shakti
+name: "Shakti (Karnataka Free Bus Travel for Women)"
+category: women_child
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Transport Department"
+description: >
+  Free travel for women and transgender persons resident in Karnataka
+  on non-premium state-run buses (KSRTC, BMTC, NWKRTC, KKRTC) anywhere
+  within the state. Show your Shakti smart card or government photo ID.
+benefits:
+  - type: service
+    summary: "Unlimited free travel on non-premium government buses within Karnataka"
+    amount_max: null
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: gender
+      op: in
+      value: [female, other]
+      label: "Women and transgender persons"
+  self_check:
+    - "You are a Karnataka resident (Shakti card or Karnataka photo ID shown while travelling)"
+required_documents:
+  - "Shakti smart card (apply on Seva Sindhu) or any government photo ID with Karnataka address"
+application_url: "https://sevasindhu.karnataka.gov.in/"
+source_urls:
+  - "https://sevasindhu.karnataka.gov.in/"
+last_verified: "2026-06-11"
+tags: [karnataka, women, transport, guarantee]

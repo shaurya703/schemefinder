@@ -1,0 +1,31 @@
+id: pm-svanidhi
+name: "PM SVANidhi (Street Vendor Loans)"
+category: business
+level: central
+state: null
+ministry: "Ministry of Housing and Urban Affairs"
+description: >
+  Collateral-free working-capital loans for street vendors: Rs 10,000
+  first loan, Rs 20,000 on repayment, then Rs 50,000. Timely repayment
+  earns a 7% interest subsidy, and digital transactions earn cashback.
+benefits:
+  - type: credit
+    summary: "Working-capital loans of ₹10,000 → ₹20,000 → ₹50,000 with 7% interest subsidy"
+    amount_max: 50000
+eligibility:
+  rules:
+    - field: occupation
+      op: eq
+      value: street_vendor
+  self_check:
+    - "You have a Certificate of Vending / identity card from the urban local body, or a letter of recommendation from the ULB or town vending committee"
+    - "You were vending in an urban area on or before the scheme's cut-off survey date"
+required_documents:
+  - "Aadhaar card"
+  - "Certificate of Vending or letter of recommendation"
+  - "Bank account details"
+application_url: "https://pmsvanidhi.mohua.gov.in/"
+source_urls:
+  - "https://pmsvanidhi.mohua.gov.in/"
+last_verified: "2026-06-11"
+tags: [street_vendor, credit, urban]

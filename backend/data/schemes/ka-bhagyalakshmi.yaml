@@ -1,0 +1,42 @@
+id: ka-bhagyalakshmi
+name: "Bhagyalakshmi (Karnataka Girl Child)"
+category: women_child
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Department of Women and Child Development"
+description: >
+  Financial security for girl children born into BPL families in
+  Karnataka: a deposit is made in the girl's name at birth which grows
+  to a maturity payout when she turns 18, conditional on schooling and
+  not marrying before 18. Covers up to two girls per family.
+benefits:
+  - type: financial
+    summary: "Deposit at birth maturing to ₹1 lakh+ at age 18, plus annual scholarships while studying"
+    amount_max: null
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: gender
+      op: eq
+      value: female
+    - field: age
+      op: lte
+      value: 1
+      label: "Girl child enrolled within one year of birth (answer the questionnaire for the child)"
+    - field: is_bpl
+      op: eq
+      value: true
+  self_check:
+    - "At most two girls per family; birth registered and enrolment done within a year"
+required_documents:
+  - "Birth certificate"
+  - "BPL card"
+  - "Parents' Aadhaar"
+  - "Bank account in girl's name"
+application_url: "https://dwcd.karnataka.gov.in/"
+source_urls:
+  - "https://dwcd.karnataka.gov.in/"
+last_verified: "2026-06-11"
+tags: [karnataka, girl_child, bpl, women]

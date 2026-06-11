@@ -1,0 +1,32 @@
+id: pm-surya-ghar
+name: "PM Surya Ghar: Muft Bijli Yojana (Rooftop Solar)"
+category: social_welfare
+level: central
+state: null
+ministry: "Ministry of New and Renewable Energy"
+description: >
+  Subsidy for installing rooftop solar panels on your home: Rs 30,000
+  for a 1 kW system, Rs 60,000 for 2 kW, and Rs 78,000 for 3 kW or
+  larger — designed to give households up to 300 units of free
+  electricity a month.
+benefits:
+  - type: subsidy
+    summary: "₹30,000–₹78,000 subsidy for a 1–3 kW rooftop solar system"
+    amount_max: 78000
+eligibility:
+  rules: []
+  self_check:
+    - "You own a house with a roof suitable for solar panels"
+    - "The household has an active electricity connection in its name"
+    - "You have not already availed another rooftop-solar subsidy"
+required_documents:
+  - "Electricity bill"
+  - "Proof of roof ownership"
+  - "Aadhaar card"
+  - "Bank account details"
+application_url: "https://pmsuryaghar.gov.in/"
+source_urls:
+  - "https://pmsuryaghar.gov.in/"
+  - "https://mnre.gov.in/"
+last_verified: "2026-06-11"
+tags: [solar, subsidy, household]

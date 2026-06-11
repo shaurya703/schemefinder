@@ -1,0 +1,43 @@
+id: pre-matric-minority
+name: "Pre-Matric Scholarship for Minority Students (Classes 9–10)"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Minority Affairs"
+description: >
+  Scholarship for students from notified minority communities (Muslim,
+  Christian, Sikh, Buddhist, Jain, Parsi) studying in classes 9 and 10.
+  Covers admission and tuition fees plus a maintenance allowance. At
+  least 30% of awards are reserved for girls.
+benefits:
+  - type: financial
+    summary: "Admission/tuition fee support and maintenance allowance for classes 9–10"
+    amount_max: 7700
+eligibility:
+  rules:
+    - field: is_minority
+      op: eq
+      value: true
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: eq
+      value: secondary
+      label: "Studying in class 9 or 10"
+    - field: annual_income
+      op: lte
+      value: 100000
+  self_check:
+    - "You scored at least 50% in the previous final examination"
+required_documents:
+  - "Self-declaration of minority community"
+  - "Income certificate"
+  - "Previous year's marksheet"
+  - "Bank account details"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://scholarships.gov.in/"
+  - "https://www.minorityaffairs.gov.in/"
+last_verified: "2026-06-11"
+tags: [student, minority, scholarship]

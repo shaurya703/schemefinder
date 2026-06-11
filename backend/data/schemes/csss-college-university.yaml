@@ -1,0 +1,40 @@
+id: csss-college-university
+name: "Central Sector Scheme of Scholarship for College and University Students"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Education"
+description: >
+  Merit-cum-means scholarship for students who scored in the top 20th
+  percentile of their class 12 board and are pursuing a regular degree.
+  Pays Rs 12,000 per year for the first three years and Rs 20,000 per
+  year thereafter (including PG years).
+benefits:
+  - type: financial
+    summary: "₹12,000/year (UG years 1–3), ₹20,000/year for further years and PG"
+    amount_max: 20000
+eligibility:
+  rules:
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [undergraduate, postgraduate]
+    - field: annual_income
+      op: lte
+      value: 450000
+  self_check:
+    - "You scored above the 80th percentile in your class 12 board exam stream"
+    - "You are in a regular (not distance/correspondence) course and not availing any other scholarship or fee waiver"
+required_documents:
+  - "Class 12 marksheet"
+  - "Income certificate"
+  - "College admission proof"
+  - "Aadhaar-seeded bank account"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://scholarships.gov.in/"
+  - "https://www.education.gov.in/scholarships-education-loan-0"
+last_verified: "2026-06-11"
+tags: [student, merit, scholarship]

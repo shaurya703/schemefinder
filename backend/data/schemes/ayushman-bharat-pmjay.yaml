@@ -1,0 +1,37 @@
+id: ayushman-bharat-pmjay
+name: "Ayushman Bharat PM-JAY (Health Insurance)"
+category: health
+level: central
+state: null
+ministry: "Ministry of Health and Family Welfare (National Health Authority)"
+description: >
+  Free hospital treatment cover of Rs 5 lakh per family per year at
+  empanelled public and private hospitals, cashless and paperless.
+  Covers poor and vulnerable families identified through SECC deprivation
+  criteria — and, since 2024, all senior citizens aged 70 and above
+  regardless of income (Vay Vandana card).
+benefits:
+  - type: insurance_cover
+    summary: "₹5 lakh per family per year cashless hospital treatment"
+    amount_max: 500000
+eligibility:
+  rules:
+    - any_of:
+        - field: is_bpl
+          op: eq
+          value: true
+        - field: age
+          op: gte
+          value: 70
+      label: "Family in the SECC deprivation list / priority ration card, OR aged 70+ (any income)"
+  self_check:
+    - "Check your family's inclusion on the official beneficiary portal (beneficiary.nha.gov.in) — coverage lists vary by state"
+required_documents:
+  - "Aadhaar card"
+  - "Ration card / SECC listing"
+application_url: "https://beneficiary.nha.gov.in/"
+source_urls:
+  - "https://pmjay.gov.in/"
+  - "https://nha.gov.in/"
+last_verified: "2026-06-11"
+tags: [health, insurance, bpl, senior_citizen]

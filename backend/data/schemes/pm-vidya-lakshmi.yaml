@@ -1,0 +1,38 @@
+id: pm-vidya-lakshmi
+name: "PM Vidyalaxmi (Education Loans)"
+category: education
+level: central
+state: null
+ministry: "Ministry of Education"
+description: >
+  Collateral-free, guarantor-free education loans for students admitted
+  to top-ranked higher education institutions, applied through a single
+  portal. Loans up to Rs 7.5 lakh get a 75% credit guarantee, and
+  students with family income up to Rs 8 lakh get a 3% interest
+  subvention on loans up to Rs 10 lakh.
+benefits:
+  - type: credit
+    summary: "Collateral-free education loan; 3% interest subvention up to ₹10 lakh for income ≤ ₹8 lakh"
+    amount_max: 1000000
+eligibility:
+  rules:
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [undergraduate, postgraduate]
+  self_check:
+    - "You have admission to a quality higher education institution (top-ranked in NIRF, per the scheme's institution list)"
+    - "For the 3% interest subvention: family income up to ₹8 lakh and no other government scholarship or interest subvention availed"
+required_documents:
+  - "Admission letter"
+  - "Income certificate (for subvention)"
+  - "KYC documents"
+  - "Marksheets"
+application_url: "https://www.vidyalakshmi.co.in/"
+source_urls:
+  - "https://www.vidyalakshmi.co.in/"
+  - "https://www.education.gov.in/"
+last_verified: "2026-06-11"
+tags: [student, education_loan, credit]

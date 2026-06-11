@@ -1,0 +1,43 @@
+id: aicte-saksham
+name: "AICTE Saksham Scholarship (Students with Disabilities)"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Education (AICTE)"
+description: >
+  Rs 50,000 per year for differently-abled students (40% disability or
+  more) pursuing a technical diploma or degree in an AICTE-approved
+  institution, to cover tuition and study expenses.
+benefits:
+  - type: financial
+    summary: "₹50,000 per year for the duration of the technical course"
+    amount_max: 50000
+eligibility:
+  rules:
+    - field: has_disability
+      op: eq
+      value: true
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [diploma_iti, undergraduate]
+      label: "Pursuing a technical diploma or degree"
+    - field: annual_income
+      op: lte
+      value: 800000
+  self_check:
+    - "Your disability is certified at 40% or more"
+    - "Your institution and course are AICTE-approved"
+required_documents:
+  - "Disability certificate (40%+)"
+  - "Income certificate"
+  - "Admission letter"
+  - "Aadhaar-seeded bank account"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://www.aicte-india.org/schemes/students-development-schemes"
+  - "https://scholarships.gov.in/"
+last_verified: "2026-06-11"
+tags: [student, disability, scholarship, technical]

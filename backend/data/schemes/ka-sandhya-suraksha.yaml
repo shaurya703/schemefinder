@@ -1,0 +1,38 @@
+id: ka-sandhya-suraksha
+name: "Sandhya Suraksha Yojane (Karnataka Old Age Pension)"
+category: pension
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Revenue Department (Social Security and Pensions)"
+description: >
+  Karnataka's own old-age pension of Rs 1,200 per month for senior
+  citizens aged 65 and above from low-income backgrounds — small and
+  marginal farmers, weavers, fishermen, labourers and unorganised
+  workers — who do not draw another government pension.
+benefits:
+  - type: financial
+    summary: "₹1,200 per month state pension"
+    amount_max: 14400
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: age
+      op: gte
+      value: 65
+  self_check:
+    - "Combined income of you and your spouse is within the scheme's low-income limit"
+    - "You are not already drawing another government pension (e.g. IGNOAPS) — one pension per person"
+    - "Bank/post-office deposits are within the scheme's limit"
+required_documents:
+  - "Age proof"
+  - "Income declaration"
+  - "Aadhaar card"
+  - "Bank/post-office account"
+application_url: "https://sevasindhu.karnataka.gov.in/"
+source_urls:
+  - "https://sevasindhu.karnataka.gov.in/"
+  - "https://dssp.karnataka.gov.in/"
+last_verified: "2026-06-11"
+tags: [karnataka, senior_citizen, pension]

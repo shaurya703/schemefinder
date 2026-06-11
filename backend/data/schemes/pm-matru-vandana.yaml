@@ -1,0 +1,36 @@
+id: pm-matru-vandana
+name: "PM Matru Vandana Yojana (Maternity Benefit)"
+category: women_child
+level: central
+state: null
+ministry: "Ministry of Women and Child Development"
+description: >
+  Cash benefit for pregnant and lactating mothers: Rs 5,000 in
+  instalments for the first child (linked to early registration,
+  check-ups and vaccination), and Rs 6,000 for a second child if she
+  is a girl.
+benefits:
+  - type: financial
+    summary: "₹5,000 for the first child; ₹6,000 if the second child is a girl"
+    amount_max: 6000
+eligibility:
+  rules:
+    - field: gender
+      op: eq
+      value: female
+    - field: age
+      op: gte
+      value: 19
+  self_check:
+    - "Pregnant or breastfeeding your first child (or second child, if a girl)"
+    - "Not in regular government/PSU employment receiving paid maternity leave"
+required_documents:
+  - "MCP (Mother and Child Protection) card"
+  - "Aadhaar card"
+  - "Bank account details"
+application_url: "https://pmmvy.wcd.gov.in/"
+source_urls:
+  - "https://pmmvy.wcd.gov.in/"
+  - "https://wcd.gov.in/"
+last_verified: "2026-06-11"
+tags: [women, mother, dbt]

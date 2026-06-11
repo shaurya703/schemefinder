@@ -1,0 +1,33 @@
+id: senior-citizen-savings
+name: "Senior Citizen Savings Scheme (SCSS)"
+category: financial
+level: central
+state: null
+ministry: "Ministry of Finance"
+description: >
+  A government-backed savings scheme for senior citizens paying 8.2%
+  interest (2026 rate), credited quarterly. Deposit Rs 1,000 to
+  Rs 30 lakh for a 5-year term (extendable by 3 years); deposits
+  qualify for Section 80C benefit.
+benefits:
+  - type: financial
+    summary: "8.2% assured interest, paid quarterly, on deposits up to ₹30 lakh"
+    amount_max: null
+eligibility:
+  rules:
+    - field: age
+      op: gte
+      value: 60
+      label: "Aged 60+ (55+ if retired on superannuation/VRS, 50+ for retired defence personnel)"
+  self_check:
+    - "Early entry (55–60) requires investing retirement benefits within one month of receipt"
+required_documents:
+  - "Age proof"
+  - "PAN card"
+  - "Retirement proof (for early entry)"
+application_url: "https://www.indiapost.gov.in/"
+source_urls:
+  - "https://www.nsiindia.gov.in/"
+  - "https://www.indiapost.gov.in/"
+last_verified: "2026-06-11"
+tags: [senior_citizen, savings]

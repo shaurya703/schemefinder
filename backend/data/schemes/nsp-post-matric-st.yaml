@@ -1,0 +1,43 @@
+id: nsp-post-matric-st
+name: "Post-Matric Scholarship for ST Students"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Tribal Affairs"
+description: >
+  Scholarship for Scheduled Tribe students studying after class 10 —
+  class 11 through PhD, including professional and technical courses.
+  Covers compulsory fees and a monthly maintenance allowance, paid
+  through the National Scholarship Portal or the state's tribal portal.
+benefits:
+  - type: financial
+    summary: "Compulsory fees + maintenance allowance, higher rates for hostellers and professional courses"
+    amount_max: 13500
+eligibility:
+  rules:
+    - field: category
+      op: eq
+      value: st
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [higher_secondary, diploma_iti, undergraduate, postgraduate, doctorate]
+      label: "Studying after class 10 (class 11 up to PhD, including diploma/ITI)"
+    - field: annual_income
+      op: lte
+      value: 250000
+  self_check:
+    - "Enrolled in a recognised institution as a regular student"
+required_documents:
+  - "Tribe certificate"
+  - "Income certificate"
+  - "Admission proof and fee receipt"
+  - "Aadhaar-seeded bank account"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://scholarships.gov.in/"
+  - "https://tribal.nic.in/"
+last_verified: "2026-06-11"
+tags: [student, st, scholarship]

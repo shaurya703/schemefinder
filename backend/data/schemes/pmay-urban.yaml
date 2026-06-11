@@ -1,0 +1,38 @@
+id: pmay-urban
+name: "PM Awas Yojana – Urban 2.0 (Urban Housing)"
+category: housing
+level: central
+state: null
+ministry: "Ministry of Housing and Urban Affairs"
+description: >
+  Housing support for urban families who own no pucca house anywhere in
+  India: assistance to build or buy a house, interest subsidy on home
+  loans, or affordable rental options. Open to EWS, LIG and MIG families
+  (annual income up to Rs 9 lakh).
+benefits:
+  - type: financial
+    summary: "Central assistance of ~₹2.5 lakh for beneficiary-led construction, or interest subsidy on home loans"
+    amount_max: 250000
+eligibility:
+  rules:
+    - field: area
+      op: eq
+      value: urban
+    - field: annual_income
+      op: lte
+      value: 900000
+      label: "EWS (≤₹3 lakh), LIG (≤₹6 lakh) or MIG (≤₹9 lakh) family income"
+  self_check:
+    - "Your family (spouse and unmarried children) owns no pucca house anywhere in India"
+    - "You have not availed assistance under any central housing scheme in the last 20 years"
+required_documents:
+  - "Aadhaar card"
+  - "Income proof"
+  - "Land/property documents (for construction)"
+  - "Bank account details"
+application_url: "https://pmay-urban.gov.in/"
+source_urls:
+  - "https://pmay-urban.gov.in/"
+  - "https://mohua.gov.in/"
+last_verified: "2026-06-11"
+tags: [housing, urban]

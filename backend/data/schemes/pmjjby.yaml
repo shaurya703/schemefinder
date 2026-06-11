@@ -1,0 +1,29 @@
+id: pmjjby
+name: "PM Jeevan Jyoti Bima Yojana (Life Insurance)"
+category: insurance
+level: central
+state: null
+ministry: "Ministry of Finance"
+description: >
+  Renewable one-year term life insurance of Rs 2 lakh for just Rs 436
+  per year, auto-debited from your bank account. Pays the full sum to
+  the nominee on death from any cause.
+benefits:
+  - type: insurance_cover
+    summary: "₹2 lakh life cover at ₹436/year premium"
+    amount_max: 200000
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [18, 50]
+  self_check:
+    - "You have a bank or post-office account with consent for auto-debit of the premium"
+required_documents:
+  - "Bank account with auto-debit consent"
+  - "Aadhaar card"
+application_url: "https://www.jansuraksha.gov.in/"
+source_urls:
+  - "https://www.jansuraksha.gov.in/"
+last_verified: "2026-06-11"
+tags: [insurance, life_cover]

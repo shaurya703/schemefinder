@@ -1,0 +1,34 @@
+id: startup-india-seed-fund
+name: "Startup India Seed Fund Scheme"
+category: business
+level: central
+state: null
+ministry: "Ministry of Commerce and Industry (DPIIT)"
+description: >
+  Early-stage funding for recognised startups through approved incubators:
+  grants up to Rs 20 lakh for proof of concept and prototype, and up to
+  Rs 50 lakh as convertible debentures or debt for market entry and
+  commercialisation.
+benefits:
+  - type: financial
+    summary: "Up to ₹20 lakh grant for prototype + up to ₹50 lakh debt/convertible for commercialisation"
+    amount_max: 7000000
+eligibility:
+  rules:
+    - field: is_entrepreneur
+      op: eq
+      value: true
+  self_check:
+    - "The startup is DPIIT-recognised and was incorporated not more than 2 years before applying"
+    - "It has a technology-driven product or service with market-fit potential"
+    - "It has not received more than ₹10 lakh support under any other central government scheme"
+    - "Indian promoters hold at least 51% shareholding"
+required_documents:
+  - "DPIIT recognition certificate"
+  - "Incorporation certificate"
+  - "Pitch deck / business plan"
+application_url: "https://seedfund.startupindia.gov.in/"
+source_urls:
+  - "https://seedfund.startupindia.gov.in/"
+last_verified: "2026-06-11"
+tags: [entrepreneur, startup, funding]

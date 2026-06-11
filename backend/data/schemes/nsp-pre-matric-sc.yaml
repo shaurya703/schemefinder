@@ -1,0 +1,43 @@
+id: nsp-pre-matric-sc
+name: "Pre-Matric Scholarship for SC Students (Classes 9–10)"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Social Justice and Empowerment"
+description: >
+  Scholarship for SC students studying in classes 9 and 10, paid through
+  the National Scholarship Portal. Covers an academic allowance for day
+  scholars and a higher allowance for hostellers, so students do not drop
+  out before matriculation.
+benefits:
+  - type: financial
+    summary: "Annual academic allowance — ₹3,500 for day scholars, ₹7,000 for hostellers"
+    amount_max: 7000
+eligibility:
+  rules:
+    - field: category
+      op: eq
+      value: sc
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: eq
+      value: secondary
+      label: "Studying in class 9 or 10"
+    - field: annual_income
+      op: lte
+      value: 250000
+  self_check:
+    - "Studying in a recognised school as a regular, full-time student"
+required_documents:
+  - "Caste certificate"
+  - "Income certificate"
+  - "Previous year's marksheet"
+  - "Aadhaar and bank account details"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://scholarships.gov.in/"
+  - "https://socialjustice.gov.in/"
+last_verified: "2026-06-11"
+tags: [student, sc, scholarship]

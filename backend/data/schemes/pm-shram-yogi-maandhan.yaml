@@ -1,0 +1,39 @@
+id: pm-shram-yogi-maandhan
+name: "PM Shram Yogi Maandhan (Unorganised Worker Pension)"
+category: pension
+level: central
+state: null
+ministry: "Ministry of Labour and Employment"
+description: >
+  Voluntary contributory pension for unorganised-sector workers earning
+  up to Rs 15,000 a month. Contribute Rs 55–200 per month (matched
+  equally by the government) until age 60, then receive a guaranteed
+  pension of Rs 3,000 per month.
+benefits:
+  - type: financial
+    summary: "Guaranteed ₹3,000 monthly pension after 60; government matches contributions"
+    amount_max: 36000
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [18, 40]
+    - field: annual_income
+      op: lte
+      value: 180000
+      label: "Monthly income ₹15,000 or less"
+    - field: occupation
+      op: in
+      value: [agricultural_labourer, construction_worker, street_vendor, artisan, self_employed, homemaker, other]
+      label: "Unorganised-sector worker (labourer, vendor, artisan, domestic worker, etc.)"
+  self_check:
+    - "Not covered under EPFO, ESIC or NPS, and not an income-tax payer"
+required_documents:
+  - "Aadhaar card"
+  - "Savings bank account (IFSC)"
+application_url: "https://maandhan.in/"
+source_urls:
+  - "https://maandhan.in/"
+  - "https://labour.gov.in/"
+last_verified: "2026-06-11"
+tags: [worker, pension, unorganised_worker]

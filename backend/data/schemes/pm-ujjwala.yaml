@@ -1,0 +1,37 @@
+id: pm-ujjwala
+name: "PM Ujjwala Yojana (Free LPG Connection)"
+category: women_child
+level: central
+state: null
+ministry: "Ministry of Petroleum and Natural Gas"
+description: >
+  A free LPG gas connection (with first refill and stove) in the name
+  of an adult woman from a poor household, plus a subsidy of Rs 300 per
+  cylinder for up to 12 refills a year.
+benefits:
+  - type: in_kind
+    summary: "Free LPG connection with first refill and stove"
+    amount_max: null
+  - type: subsidy
+    summary: "₹300 subsidy per 14.2 kg cylinder, up to 12 refills per year"
+    amount_max: 3600
+eligibility:
+  rules:
+    - field: gender
+      op: eq
+      value: female
+    - field: age
+      op: gte
+      value: 18
+  self_check:
+    - "Your household has no existing LPG connection"
+    - "You belong to a poor household — SECC 2011 list, AAY, PMAY, or any state BPL list; others can qualify via a self-declaration of poor status"
+required_documents:
+  - "Aadhaar card"
+  - "Ration card or poor-household proof / self-declaration"
+  - "Bank account details"
+application_url: "https://www.pmuy.gov.in/"
+source_urls:
+  - "https://www.pmuy.gov.in/"
+last_verified: "2026-06-11"
+tags: [women, lpg, bpl]

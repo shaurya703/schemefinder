@@ -1,0 +1,33 @@
+id: pmkvy
+name: "PM Kaushal Vikas Yojana (Free Skill Training)"
+category: skills
+level: central
+state: null
+ministry: "Ministry of Skill Development and Entrepreneurship"
+description: >
+  Free, short-term skill training and certification in hundreds of job
+  roles through accredited centres, including recognition of prior
+  learning for people who already have informal skills. Aimed at school
+  and college dropouts and the unemployed.
+benefits:
+  - type: service
+    summary: "Free NSQF-aligned training, industry certification, and placement assistance"
+    amount_max: null
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [15, 45]
+  self_check:
+    - "You have an Aadhaar card and a bank account"
+    - "You meet the entry criteria of the specific job role you choose (varies by course)"
+required_documents:
+  - "Aadhaar card"
+  - "Bank account details"
+  - "Education certificates (course-dependent)"
+application_url: "https://www.pmkvyofficial.org/"
+source_urls:
+  - "https://www.pmkvyofficial.org/"
+  - "https://msde.gov.in/"
+last_verified: "2026-06-11"
+tags: [youth, skills, training]

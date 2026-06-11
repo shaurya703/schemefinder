@@ -1,0 +1,41 @@
+id: ka-yuva-nidhi
+name: "Yuva Nidhi (Karnataka Unemployment Allowance)"
+category: employment
+level: state
+state: karnataka
+ministry: "Government of Karnataka — Skill Development, Entrepreneurship and Livelihood"
+description: >
+  Monthly unemployment allowance for young Karnataka graduates and
+  diploma holders: Rs 3,000 per month for degree holders and Rs 1,500
+  for diploma holders, paid for up to two years or until they find work.
+benefits:
+  - type: financial
+    summary: "₹3,000/month (degree) or ₹1,500/month (diploma) for up to 2 years"
+    amount_max: 36000
+eligibility:
+  rules:
+    - field: state
+      op: eq
+      value: karnataka
+    - field: occupation
+      op: eq
+      value: unemployed
+    - field: education_level
+      op: in
+      value: [diploma_iti, undergraduate, postgraduate]
+      label: "Completed a degree or diploma"
+  self_check:
+    - "You passed your degree/diploma in 2022-23 or later and have been unemployed for 6 months since"
+    - "You are a Karnataka resident (domicile of 6 years) and not pursuing further full-time education"
+    - "Not receiving benefits from similar schemes, an apprenticeship stipend, or self-employed with a loan from a govt scheme"
+required_documents:
+  - "Degree/diploma certificate"
+  - "Aadhaar card"
+  - "Karnataka domicile proof"
+  - "Bank account details"
+application_url: "https://sevasindhugs.karnataka.gov.in/"
+source_urls:
+  - "https://sevasindhugs.karnataka.gov.in/"
+  - "https://kaushalkar.karnataka.gov.in/"
+last_verified: "2026-06-11"
+tags: [karnataka, youth, unemployment, guarantee]

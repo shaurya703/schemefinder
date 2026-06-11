@@ -1,0 +1,39 @@
+id: pm-vishwakarma
+name: "PM Vishwakarma (Traditional Artisans)"
+category: business
+level: central
+state: null
+ministry: "Ministry of Micro, Small and Medium Enterprises"
+description: >
+  Support for artisans and craftspeople working with their hands in 18
+  traditional trades (carpenter, blacksmith, potter, cobbler, tailor,
+  goldsmith, weaver and others): recognition with a PM Vishwakarma ID,
+  skill training with a Rs 500/day stipend, a Rs 15,000 toolkit incentive,
+  and collateral-free loans up to Rs 3 lakh at 5% interest.
+benefits:
+  - type: credit
+    summary: "Collateral-free credit up to ₹3 lakh at 5% interest (₹1 lakh + ₹2 lakh tranches)"
+    amount_max: 300000
+  - type: in_kind
+    summary: "₹15,000 toolkit incentive and skill training with ₹500/day stipend"
+    amount_max: 15000
+eligibility:
+  rules:
+    - field: occupation
+      op: eq
+      value: artisan
+    - field: age
+      op: gte
+      value: 18
+  self_check:
+    - "You work in one of the 18 listed family-based traditional trades, with hands and tools, in the unorganised sector"
+    - "No family member has a government job, and you have not taken a loan under PMEGP, Mudra or SVANidhi in the last 5 years"
+required_documents:
+  - "Aadhaar card"
+  - "Bank account details"
+  - "Mobile number linked to Aadhaar"
+application_url: "https://pmvishwakarma.gov.in/"
+source_urls:
+  - "https://pmvishwakarma.gov.in/"
+last_verified: "2026-06-11"
+tags: [artisan, credit, skills]

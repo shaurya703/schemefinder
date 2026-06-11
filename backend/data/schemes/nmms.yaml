@@ -1,0 +1,41 @@
+id: nmms
+name: "National Means-cum-Merit Scholarship (NMMS)"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Education"
+description: >
+  Rs 12,000 per year for bright students from economically weaker
+  families to continue studying in classes 9 to 12. Selection is through
+  a state-level exam taken in class 8; the scholarship is for students
+  of government, government-aided and local-body schools.
+benefits:
+  - type: financial
+    summary: "₹12,000 per year through classes 9–12"
+    amount_max: 12000
+eligibility:
+  rules:
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [secondary, higher_secondary]
+      label: "Studying in classes 9–12"
+    - field: annual_income
+      op: lte
+      value: 350000
+  self_check:
+    - "You qualified the NMMS selection exam held in class 8 (minimum 55% in the class 7 exam to appear, 50% for SC/ST)"
+    - "You study in a government, government-aided or local-body school (not private or residential)"
+required_documents:
+  - "NMMS exam qualification proof"
+  - "Income certificate"
+  - "School enrolment certificate"
+  - "Bank account details"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://scholarships.gov.in/"
+  - "https://dsel.education.gov.in/nmmss"
+last_verified: "2026-06-11"
+tags: [student, merit, scholarship, school]

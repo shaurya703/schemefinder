@@ -1,0 +1,34 @@
+id: kisan-credit-card
+name: "Kisan Credit Card (KCC)"
+category: agriculture
+level: central
+state: null
+ministry: "Ministry of Agriculture and Farmers Welfare"
+description: >
+  A revolving credit line for farming needs at subsidised interest.
+  Short-term crop loans up to Rs 5 lakh (limit raised in the 2025 Union
+  Budget) carry an effective interest of around 4% with timely repayment.
+  Also available for animal husbandry and fisheries.
+benefits:
+  - type: credit
+    summary: "Crop loans up to ₹5 lakh at ~4% effective interest with prompt repayment"
+    amount_max: 500000
+eligibility:
+  rules:
+    - field: is_farmer
+      op: eq
+      value: true
+  self_check:
+    - "Tenant farmers, sharecroppers and self-help groups of farmers are also eligible with supporting records"
+    - "Those in dairy, poultry or inland fisheries can apply for an animal husbandry / fisheries KCC"
+required_documents:
+  - "Aadhaar card / identity proof"
+  - "Land records or tenancy documents"
+  - "Passport-size photographs"
+  - "Bank account details"
+application_url: "https://www.jansamarth.in/"
+source_urls:
+  - "https://www.myscheme.gov.in/schemes/kcc"
+  - "https://www.jansamarth.in/"
+last_verified: "2026-06-11"
+tags: [farmer, credit]

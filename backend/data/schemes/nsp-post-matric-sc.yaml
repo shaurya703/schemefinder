@@ -1,0 +1,43 @@
+id: nsp-post-matric-sc
+name: "Post-Matric Scholarship for SC Students"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Social Justice and Empowerment"
+description: >
+  The largest SC education scheme: covers full compulsory fees plus a
+  monthly academic allowance for SC students studying anything after
+  class 10 — from class 11 to PhD, including professional courses —
+  whose family income is within the ceiling.
+benefits:
+  - type: financial
+    summary: "Full compulsory fees + academic allowance of ₹4,000–₹13,500/year depending on course and hostel status"
+    amount_max: 13500
+eligibility:
+  rules:
+    - field: category
+      op: eq
+      value: sc
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [higher_secondary, diploma_iti, undergraduate, postgraduate, doctorate]
+      label: "Studying after class 10 (class 11 up to PhD, including diploma/ITI)"
+    - field: annual_income
+      op: lte
+      value: 250000
+  self_check:
+    - "Enrolled in a recognised institution as a regular student"
+required_documents:
+  - "Caste certificate"
+  - "Income certificate"
+  - "Admission proof and fee receipt"
+  - "Aadhaar-seeded bank account"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://scholarships.gov.in/"
+  - "https://socialjustice.gov.in/"
+last_verified: "2026-06-11"
+tags: [student, sc, scholarship]

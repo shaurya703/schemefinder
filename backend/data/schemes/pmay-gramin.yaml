@@ -1,0 +1,33 @@
+id: pmay-gramin
+name: "PM Awas Yojana – Gramin (Rural Housing)"
+category: housing
+level: central
+state: null
+ministry: "Ministry of Rural Development"
+description: >
+  Financial assistance of Rs 1.20 lakh (Rs 1.30 lakh in hilly and
+  difficult areas) to build a pucca house, for rural families who are
+  houseless or live in kutcha houses and appear in the scheme's
+  permanent wait list, drawn from SECC and Awaas+ surveys.
+benefits:
+  - type: financial
+    summary: "₹1.20–1.30 lakh assistance to build a pucca house, plus convergence with MGNREGA and toilet schemes"
+    amount_max: 130000
+eligibility:
+  rules:
+    - field: area
+      op: eq
+      value: rural
+  self_check:
+    - "Your family is houseless or lives in a kutcha (0–2 room) house and appears in the PMAY-G permanent wait list (SECC 2011 / Awaas+ survey)"
+    - "No family member has a government job, pays income tax, or owns specified assets (motorised vehicle, mechanised farm equipment, KCC limit ≥ ₹50,000)"
+required_documents:
+  - "Aadhaar card"
+  - "Job card / SECC reference"
+  - "Bank account details"
+application_url: "https://pmayg.nic.in/"
+source_urls:
+  - "https://pmayg.nic.in/"
+  - "https://rural.gov.in/"
+last_verified: "2026-06-11"
+tags: [housing, rural, bpl]

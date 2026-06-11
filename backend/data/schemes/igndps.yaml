@@ -1,0 +1,38 @@
+id: igndps
+name: "Indira Gandhi National Disability Pension (IGNDPS)"
+category: pension
+level: central
+state: null
+ministry: "Ministry of Rural Development"
+description: >
+  Monthly pension of Rs 300 from the centre (plus state top-ups) for
+  adults with severe or multiple disabilities living in below-poverty-line
+  households.
+benefits:
+  - type: financial
+    summary: "₹300/month central pension plus state top-up"
+    amount_max: 3600
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [18, 79]
+      label: "Aged 18–79 (shifts to old-age pension at 80)"
+    - field: has_disability
+      op: eq
+      value: true
+    - field: is_bpl
+      op: eq
+      value: true
+  self_check:
+    - "Disability is certified at 80% or more, or you have multiple disabilities"
+required_documents:
+  - "Disability certificate"
+  - "BPL card"
+  - "Aadhaar card"
+  - "Bank/post-office account"
+application_url: "https://nsap.nic.in/"
+source_urls:
+  - "https://nsap.nic.in/"
+last_verified: "2026-06-11"
+tags: [disability, pension, bpl]

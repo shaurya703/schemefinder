@@ -1,0 +1,34 @@
+id: pm-fasal-bima
+name: "Pradhan Mantri Fasal Bima Yojana (Crop Insurance)"
+category: agriculture
+level: central
+state: null
+ministry: "Ministry of Agriculture and Farmers Welfare"
+description: >
+  Heavily subsidised crop insurance. Farmers pay at most 2% of the sum
+  insured for kharif crops, 1.5% for rabi and 5% for commercial or
+  horticultural crops; the government pays the rest of the premium. Covers
+  yield loss from natural calamities, pests and diseases, plus prevented
+  sowing and post-harvest losses.
+benefits:
+  - type: insurance_cover
+    summary: "Crop insurance at 1.5–5% premium; compensation for crop loss from calamities, pests and disease"
+    amount_max: null
+eligibility:
+  rules:
+    - field: is_farmer
+      op: eq
+      value: true
+  self_check:
+    - "You grow a notified crop in a notified area for the season"
+    - "You have insurable interest in the crop (landowner or tenant/sharecropper with records)"
+required_documents:
+  - "Aadhaar card"
+  - "Land records or tenancy agreement"
+  - "Bank account details"
+  - "Sowing declaration (where required)"
+application_url: "https://pmfby.gov.in/"
+source_urls:
+  - "https://pmfby.gov.in/"
+last_verified: "2026-06-11"
+tags: [farmer, insurance, crop]

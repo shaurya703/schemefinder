@@ -1,0 +1,30 @@
+id: pmsby
+name: "PM Suraksha Bima Yojana (Accident Insurance)"
+category: insurance
+level: central
+state: null
+ministry: "Ministry of Finance"
+description: >
+  Accidental death and disability insurance of Rs 2 lakh for just Rs 20
+  per year, auto-debited from your bank account. Pays Rs 2 lakh for
+  accidental death or total permanent disability, Rs 1 lakh for partial
+  permanent disability.
+benefits:
+  - type: insurance_cover
+    summary: "₹2 lakh accidental death/disability cover at ₹20/year"
+    amount_max: 200000
+eligibility:
+  rules:
+    - field: age
+      op: between
+      value: [18, 70]
+  self_check:
+    - "You have a bank or post-office account with consent for auto-debit of the premium"
+required_documents:
+  - "Bank account with auto-debit consent"
+  - "Aadhaar card"
+application_url: "https://www.jansuraksha.gov.in/"
+source_urls:
+  - "https://www.jansuraksha.gov.in/"
+last_verified: "2026-06-11"
+tags: [insurance, accident_cover]

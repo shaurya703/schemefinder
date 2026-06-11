@@ -1,0 +1,43 @@
+id: post-matric-minority
+name: "Post-Matric Scholarship for Minority Students"
+category: scholarship
+level: central
+state: null
+ministry: "Ministry of Minority Affairs"
+description: >
+  Scholarship for students from notified minority communities studying
+  from class 11 up to PhD, including technical and vocational courses.
+  Covers admission and course fees plus a maintenance allowance; 30% of
+  awards are reserved for girls.
+benefits:
+  - type: financial
+    summary: "Course fee support and maintenance allowance for class 11 to PhD"
+    amount_max: 10000
+eligibility:
+  rules:
+    - field: is_minority
+      op: eq
+      value: true
+    - field: is_student
+      op: eq
+      value: true
+    - field: education_level
+      op: in
+      value: [higher_secondary, diploma_iti, undergraduate, postgraduate, doctorate]
+      label: "Studying after class 10"
+    - field: annual_income
+      op: lte
+      value: 200000
+  self_check:
+    - "You scored at least 50% in the previous final examination"
+required_documents:
+  - "Self-declaration of minority community"
+  - "Income certificate"
+  - "Admission proof and fee receipt"
+  - "Bank account details"
+application_url: "https://scholarships.gov.in/"
+source_urls:
+  - "https://scholarships.gov.in/"
+  - "https://www.minorityaffairs.gov.in/"
+last_verified: "2026-06-11"
+tags: [student, minority, scholarship]
