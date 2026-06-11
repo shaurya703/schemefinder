@@ -8,10 +8,11 @@ description: >
   A high-interest, tax-free savings account for a girl child, opened by
   a parent or guardian before she turns 10. Deposits of Rs 250 to
   Rs 1.5 lakh per year earn one of the highest small-savings interest
-  rates (8.2% in 2026), with full exemption under Section 80C.
+  rates (8.2% in 2026), with full exemption under Section 80C. The
+  account matures 21 years after opening.
 benefits:
   - type: financial
-    summary: "8.2% tax-free interest on deposits up to ₹1.5 lakh/year, maturing when the girl turns 21"
+    summary: "8.2% tax-free interest on deposits up to ₹1.5 lakh/year, maturing 21 years after opening"
     amount_max: null
 eligibility:
   rules:

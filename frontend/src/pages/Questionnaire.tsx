@@ -169,7 +169,7 @@ export default function Questionnaire() {
 
       {error && <p className="mt-4 text-sm text-rose-600">{error}</p>}
       {submitting && (
-        <p className="mt-4 text-sm text-slate-500">Checking 50 schemes…</p>
+        <p className="mt-4 text-sm text-slate-500">Checking every scheme…</p>
       )}
 
       {stepIndex > 0 && !submitting && (

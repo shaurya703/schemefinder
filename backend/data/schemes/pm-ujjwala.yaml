@@ -7,14 +7,15 @@ ministry: "Ministry of Petroleum and Natural Gas"
 description: >
   A free LPG gas connection (with first refill and stove) in the name
   of an adult woman from a poor household, plus a subsidy of Rs 300 per
-  cylinder for up to 12 refills a year.
+  cylinder for up to 9 refills a year (FY 2025-26 cap; check the current
+  limit, as it is revised yearly).
 benefits:
   - type: in_kind
     summary: "Free LPG connection with first refill and stove"
     amount_max: null
   - type: subsidy
-    summary: "₹300 subsidy per 14.2 kg cylinder, up to 12 refills per year"
-    amount_max: 3600
+    summary: "₹300 subsidy per 14.2 kg cylinder, up to 9 refills per year"
+    amount_max: 2700
 eligibility:
   rules:
     - field: gender

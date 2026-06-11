@@ -5,12 +5,14 @@ level: central
 state: null
 ministry: "Ministry of Housing and Urban Affairs"
 description: >
-  Collateral-free working-capital loans for street vendors: Rs 10,000
-  first loan, Rs 20,000 on repayment, then Rs 50,000. Timely repayment
-  earns a 7% interest subsidy, and digital transactions earn cashback.
+  Collateral-free working-capital loans for street vendors: Rs 15,000
+  first loan, Rs 25,000 on repayment, then Rs 50,000 (tranches raised in
+  the August 2025 restructuring; scheme extended to March 2030). Timely
+  repayment earns a 7% interest subsidy, and digital transactions earn
+  cashback plus a UPI-linked RuPay credit card.
 benefits:
   - type: credit
-    summary: "Working-capital loans of ₹10,000 → ₹20,000 → ₹50,000 with 7% interest subsidy"
+    summary: "Working-capital loans of ₹15,000 → ₹25,000 → ₹50,000 with 7% interest subsidy"
     amount_max: 50000
 eligibility:
   rules:

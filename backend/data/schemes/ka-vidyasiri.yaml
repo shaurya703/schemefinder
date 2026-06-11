@@ -32,9 +32,11 @@ eligibility:
     - field: annual_income
       op: lte
       value: 250000
+      label: "Family income within the category limit (up to ₹2.5 lakh)"
   self_check:
+    - "Income limit depends on sub-category: ₹2.5 lakh for Category-1, ₹1 lakh for Categories 2A/3A/3B"
     - "You applied for but were not allotted a government hostel seat"
-    - "You study in a recognised institution away from your home town"
+    - "You study in a recognised institution away from your home town, with the minimum required marks in the previous year"
 required_documents:
   - "Caste and income certificate"
   - "Admission proof"

@@ -23,6 +23,7 @@ eligibility:
     - "It has a technology-driven product or service with market-fit potential"
     - "It has not received more than ₹10 lakh support under any other central government scheme"
     - "Indian promoters hold at least 51% shareholding"
+    - "Applications open in windows — confirm on the portal that the current round is accepting startups"
 required_documents:
   - "DPIIT recognition certificate"
   - "Incorporation certificate"

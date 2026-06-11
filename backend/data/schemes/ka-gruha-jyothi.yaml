@@ -6,11 +6,12 @@ state: karnataka
 ministry: "Government of Karnataka — Energy Department"
 description: >
   Free electricity for residential connections in Karnataka up to 200
-  units a month, based on the household's average annual consumption
-  plus a 10% buffer. One of the state's guarantee schemes.
+  units a month, based on the household's FY 2022-23 average consumption:
+  homes averaging under 90 units get a flat 10 extra free units, others
+  get their average plus 10%. One of the state's guarantee schemes.
 benefits:
   - type: subsidy
-    summary: "Zero electricity bill up to 200 units/month (within average use + 10%)"
+    summary: "Zero electricity bill up to 200 units/month (baseline average + buffer)"
     amount_max: null
 eligibility:
   rules:
@@ -19,7 +20,7 @@ eligibility:
       value: karnataka
   self_check:
     - "The connection is residential and registered in a household member's name (tenants can apply with the RR number)"
-    - "Monthly usage stays within your average annual consumption + 10%, capped at 200 units"
+    - "Monthly usage stays within your baseline average plus the buffer (flat +10 units below a 90-unit average, +10% above it), capped at 200 units"
 required_documents:
   - "Electricity account ID (RR number)"
   - "Aadhaar card"

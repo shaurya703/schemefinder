@@ -5,13 +5,13 @@ level: state
 state: karnataka
 ministry: "Government of Karnataka — Food, Civil Supplies and Consumer Affairs"
 description: >
-  Ten kilograms of foodgrain per person per month for priority (BPL)
-  and Antyodaya households in Karnataka — 5 kg from the central PMGKAY
-  plus the state's additional 5 kg, currently paid partly as cash
-  transfer.
+  Ten kilograms of rice per person per month for priority (BPL) and
+  Antyodaya households in Karnataka — 5 kg from the central PMGKAY plus
+  the state's additional 5 kg, fully distributed as grain through ration
+  shops since February 2025 (replacing the earlier cash transfer).
 benefits:
   - type: in_kind
-    summary: "10 kg foodgrain per person/month (part paid as direct cash transfer)"
+    summary: "10 kg free rice per person per month through the ration shop"
     amount_max: null
 eligibility:
   rules:

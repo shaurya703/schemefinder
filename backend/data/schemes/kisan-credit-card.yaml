@@ -7,11 +7,12 @@ ministry: "Ministry of Agriculture and Farmers Welfare"
 description: >
   A revolving credit line for farming needs at subsidised interest.
   Short-term crop loans up to Rs 5 lakh (limit raised in the 2025 Union
-  Budget) carry an effective interest of around 4% with timely repayment.
-  Also available for animal husbandry and fisheries.
+  Budget); the first Rs 3 lakh carries an effective interest of around 4%
+  with timely repayment under the interest subvention scheme. Also
+  available for animal husbandry and fisheries.
 benefits:
   - type: credit
-    summary: "Crop loans up to ₹5 lakh at ~4% effective interest with prompt repayment"
+    summary: "Crop loans up to ₹5 lakh; ~4% effective interest on the first ₹3 lakh with prompt repayment"
     amount_max: 500000
 eligibility:
   rules:

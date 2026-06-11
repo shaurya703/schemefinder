@@ -17,7 +17,8 @@ eligibility:
   rules:
     - field: age
       op: between
-      value: [15, 45]
+      value: [15, 59]
+      label: "Aged 15–45 for short-term training, 18–59 for recognition of prior learning"
   self_check:
     - "You have an Aadhaar card and a bank account"
     - "You meet the entry criteria of the specific job role you choose (varies by course)"
@@ -25,9 +26,9 @@ required_documents:
   - "Aadhaar card"
   - "Bank account details"
   - "Education certificates (course-dependent)"
-application_url: "https://www.pmkvyofficial.org/"
+application_url: "https://www.skillindiadigital.gov.in/"
 source_urls:
-  - "https://www.pmkvyofficial.org/"
+  - "https://www.skillindiadigital.gov.in/"
   - "https://msde.gov.in/"
 last_verified: "2026-06-11"
 tags: [youth, skills, training]

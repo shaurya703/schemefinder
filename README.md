@@ -4,7 +4,7 @@
 
 India runs hundreds of scholarships, subsidies, pensions, insurance and loan schemes. The information exists, but it's scattered across dozens of portals, written in dense officialese, and organised by ministry rather than by *person*. The result is a discovery problem with real cost: an SC student who'd get her degree fees covered, a street vendor entitled to a ₹50,000 loan, or a 70-year-old who now gets free ₹5-lakh health cover often simply never find out.
 
-SchemeFinder turns that around: you describe yourself once (8–11 quick questions, all skippable), and a transparent rules engine checks you against a verified dataset of 50 central and Karnataka schemes — showing exactly **which criteria passed, which couldn't be verified, and why**.
+SchemeFinder turns that around: you describe yourself once (8–11 quick questions, all skippable), and a transparent rules engine checks you against a verified dataset of 48 central and Karnataka schemes — showing exactly **which criteria passed, which couldn't be verified, and why**.
 
 | | | |
 |---|---|---|
@@ -49,7 +49,7 @@ Two design decisions matter here:
 | no fail, any **unknown** (incl. self-check items) | possibly eligible |
 | all **pass** | eligible |
 
-`any_of` groups handle real OR-logic (Stand-Up India: *SC/ST **or** woman entrepreneur*): the group passes if any branch passes, fails only when **every** branch fails, and stays unknown otherwise — a mix of fail + unknown must not fail, because the unknown branch might still pass.
+`any_of` groups handle real OR-logic (Ayushman Bharat PM-JAY: *SECC-listed poor family **or** aged 70+*): the group passes if any branch passes, fails only when **every** branch fails, and stays unknown otherwise — a mix of fail + unknown must not fail, because the unknown branch might still pass.
 
 **Example.** Profile: 21-year-old OBC woman in Karnataka, family income ₹2,00,000, studying for a bachelor's degree. Against the OBC post-matric scholarship:
 
@@ -83,7 +83,7 @@ docker compose up --build
 # frontend → http://localhost:3000   backend → http://localhost:8000/docs
 ```
 
-That starts Postgres, validates + seeds the 50-scheme dataset, and serves the React app.
+That starts Postgres, validates + seeds the 48-scheme dataset, and serves the React app.
 
 For local development:
 
@@ -110,7 +110,7 @@ The engine suite pins every operator at its boundaries (age exactly at a limit, 
 
 ## Data sourcing & verification
 
-- Only schemes verifiable from an **official source** are included; each entry keeps its source URL(s) and a `last_verified` date.
+- Only schemes verifiable from an **official source** are included; each entry keeps its source URL(s) and a `last_verified` date. Every entry was cross-checked against official portals and PIB releases on 2026-06-11; two schemes that had ended (Stand-Up India, Karnataka Raitha Shakti) were dropped during that pass.
 - Where a criterion's official wording is fuzzy or list-based (SECC deprivation, "poor household"), the entry uses a conservative rule plus a self-check item instead of pretending precision.
 - Amounts shown are the headline figures from the official source (e.g. PM-KISAN ₹6,000/yr; KCC limit ₹5 lakh after the 2025 budget revision).
 - The UI repeats on every surface: **verify on the official site before applying.**
@@ -118,7 +118,7 @@ The engine suite pins every operator at its boundaries (age exactly at a limit, 
 ## Limitations
 
 - **Schemes change.** This dataset is a verified snapshot, not a live feed. Income ceilings, amounts and even whole schemes are revised every budget cycle.
-- **Coverage is 50 schemes** — all-India flagships plus Karnataka's major programmes. A real deployment needs every state and several hundred entries.
+- **Coverage is 48 schemes** — all-India flagships plus Karnataka's major programmes. A real deployment needs every state and several hundred entries.
 - The questionnaire models one applicant at a time; household-level criteria (e.g. "any family member with a government job") are self-check items rather than asked questions.
 - English only, for now — the target user often isn't an English reader.
 

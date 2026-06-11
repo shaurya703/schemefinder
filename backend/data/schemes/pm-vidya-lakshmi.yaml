@@ -30,9 +30,9 @@ required_documents:
   - "Income certificate (for subvention)"
   - "KYC documents"
   - "Marksheets"
-application_url: "https://www.vidyalakshmi.co.in/"
+application_url: "https://pmvidyalaxmi.co.in/"
 source_urls:
-  - "https://www.vidyalakshmi.co.in/"
+  - "https://pmvidyalaxmi.co.in/"
   - "https://www.education.gov.in/"
 last_verified: "2026-06-11"
 tags: [student, education_loan, credit]
