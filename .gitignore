@@ -27,3 +27,6 @@ dist/
 # Local databases
 *.db
 pgdata/
+
+# TS build cache
+*.tsbuildinfo
