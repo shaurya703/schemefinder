@@ -1,4 +1,4 @@
-# Claude / assistant config — never commit
+# local tooling config — never commit
 .claude/
 
 # Python
