@@ -1,3 +1,4 @@
+import { Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getMeta, listSchemes } from "../api";
@@ -37,23 +38,34 @@ export default function Browse() {
       <h1 className="text-2xl font-bold">All schemes</h1>
       <p className="mt-1 text-sm text-slate-600">
         Every scheme in the dataset, with official links. Use{" "}
-        <Link to="/find" className="font-semibold text-emerald-600">
+        <Link
+          to="/find"
+          className="rounded font-semibold text-primary hover:text-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        >
           Find my schemes
         </Link>{" "}
         to filter by your own eligibility.
       </p>
 
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-        <input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Search by name, keyword…"
-          className="w-full rounded-xl border border-slate-300 bg-white p-3 text-sm focus:border-emerald-500 focus:outline-none sm:max-w-xs"
-        />
+        <label className="relative w-full sm:max-w-xs">
+          <span className="sr-only">Search schemes</span>
+          <Search
+            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+            aria-hidden="true"
+          />
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Search by name, keyword…"
+            className="w-full rounded-xl border border-slate-300 bg-white p-3 pl-9 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          />
+        </label>
         <select
           value={state}
           onChange={(e) => setState(e.target.value)}
-          className="rounded-xl border border-slate-300 bg-white p-3 text-sm"
+          aria-label="Filter by state"
+          className="cursor-pointer rounded-xl border border-slate-300 bg-white p-3 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
           <option value="">All states (central only + state)</option>
           {meta?.states.map((s) => (
@@ -87,7 +99,7 @@ export default function Browse() {
               <Link
                 key={s.id}
                 to={`/schemes/${s.id}`}
-                className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-emerald-400"
+                className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-colors duration-200 hover:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none"
               >
                 <div className="flex flex-wrap gap-1.5">
                   <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-slate-600">
@@ -104,10 +116,10 @@ export default function Browse() {
                   </span>
                 </div>
                 <h3 className="mt-2 font-bold leading-snug">{s.name}</h3>
-                <p className="mt-1 text-sm font-medium text-emerald-700">
+                <p className="mt-1 text-sm font-semibold text-primary-dark">
                   {s.benefits[0]?.summary}
                 </p>
-                <p className="mt-1 line-clamp-2 text-sm text-slate-600">{s.description}</p>
+                <p className="mt-1 line-clamp-2 text-sm text-slate-700">{s.description}</p>
               </Link>
             ))}
           </div>
@@ -121,10 +133,11 @@ function FilterChip(props: { label: string; active: boolean; onClick: () => void
   return (
     <button
       onClick={props.onClick}
-      className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition ${
+      aria-pressed={props.active}
+      className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none ${
         props.active
-          ? "bg-emerald-600 text-white"
-          : "border border-slate-300 bg-white text-slate-600 hover:border-emerald-400"
+          ? "bg-primary text-white"
+          : "border border-slate-300 bg-white text-slate-700 hover:border-primary/60"
       }`}
     >
       {props.label}

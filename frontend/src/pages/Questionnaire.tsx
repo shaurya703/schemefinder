@@ -1,3 +1,4 @@
+import { ArrowRight, Check } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMeta, matchProfile } from "../api";
@@ -83,15 +84,22 @@ export default function Questionnaire() {
           </span>
           <button
             onClick={() => goNext(profile)}
-            className="font-medium text-slate-500 underline-offset-2 hover:underline"
+            className="rounded font-medium text-slate-600 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             disabled={submitting}
           >
             Skip — I'd rather not say
           </button>
         </div>
-        <div className="h-1.5 overflow-hidden rounded-full bg-slate-200">
+        <div
+          className="h-1.5 overflow-hidden rounded-full bg-slate-200"
+          role="progressbar"
+          aria-valuenow={stepIndex + 1}
+          aria-valuemin={1}
+          aria-valuemax={steps.length}
+          aria-label="Questionnaire progress"
+        >
           <div
-            className="h-full rounded-full bg-emerald-500 transition-all"
+            className="h-full rounded-full bg-primary transition-all motion-reduce:transition-none"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -129,9 +137,10 @@ export default function Questionnaire() {
 
         {step.kind === "state" && (
           <select
-            className="w-full rounded-xl border border-slate-300 bg-white p-3.5 text-base focus:border-emerald-500 focus:outline-none"
+            className="w-full cursor-pointer rounded-xl border border-slate-300 bg-white p-3.5 text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             value={profile.state ?? ""}
             onChange={(e) => answer("state", e.target.value || undefined)}
+            aria-label={step.title}
           >
             <option value="">Choose your state…</option>
             {meta.states.map((s) => (
@@ -175,7 +184,7 @@ export default function Questionnaire() {
       {stepIndex > 0 && !submitting && (
         <button
           onClick={() => setStepIndex((i) => i - 1)}
-          className="mt-8 text-sm font-medium text-slate-500 hover:text-slate-700"
+          className="mt-8 rounded text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none"
         >
           ← Back
         </button>
@@ -193,10 +202,10 @@ function ChoiceButton(props: {
   return (
     <button
       onClick={props.onClick}
-      className={`rounded-xl border p-3.5 text-left transition ${
+      className={`rounded-xl border p-3.5 text-left transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none ${
         props.selected
-          ? "border-emerald-500 bg-emerald-50"
-          : "border-slate-300 bg-white hover:border-emerald-400 hover:bg-emerald-50/40"
+          ? "border-primary bg-primary-soft"
+          : "border-slate-300 bg-white hover:border-primary/60 hover:bg-primary-soft/40"
       }`}
     >
       <span className="font-medium">{props.label}</span>
@@ -221,11 +230,12 @@ function NumberStep(props: {
         min={0}
         value={props.draft}
         placeholder={props.step.placeholder}
+        aria-label={props.step.title}
         onChange={(e) => props.setDraft(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === "Enter" && valid && parsed !== undefined) props.onSubmit(parsed);
         }}
-        className="w-full rounded-xl border border-slate-300 bg-white p-3.5 text-base focus:border-emerald-500 focus:outline-none"
+        className="w-full rounded-xl border border-slate-300 bg-white p-3.5 text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         autoFocus
       />
       {props.step.quickPicks && (
@@ -234,7 +244,7 @@ function NumberStep(props: {
             <button
               key={q.label}
               onClick={() => props.setDraft(String(q.value))}
-              className="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:border-emerald-400"
+              className="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors duration-200 hover:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary motion-reduce:transition-none"
             >
               {q.label}
             </button>
@@ -244,7 +254,7 @@ function NumberStep(props: {
       <button
         onClick={() => props.onSubmit(parsed)}
         disabled={!valid || parsed === undefined}
-        className="mt-4 w-full rounded-xl bg-emerald-600 py-3 font-semibold text-white transition enabled:hover:bg-emerald-700 disabled:opacity-40"
+        className="mt-4 w-full rounded-xl bg-primary py-3 font-semibold text-white transition-colors duration-200 enabled:hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40 motion-reduce:transition-none"
       >
         Next
       </button>
@@ -271,10 +281,11 @@ function MultiPick(props: {
           <button
             key={o.value}
             onClick={() => toggle(o.value)}
-            className={`rounded-xl border p-3 text-left text-sm transition ${
+            aria-pressed={props.picks.includes(o.value)}
+            className={`rounded-xl border p-3 text-left text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none ${
               props.picks.includes(o.value)
-                ? "border-emerald-500 bg-emerald-50 font-medium"
-                : "border-slate-300 bg-white hover:border-emerald-400"
+                ? "border-primary bg-primary-soft font-medium"
+                : "border-slate-300 bg-white hover:border-primary/60"
             }`}
           >
             {o.label}
@@ -284,7 +295,7 @@ function MultiPick(props: {
       </div>
       <button
         onClick={props.onDone}
-        className="mt-4 w-full rounded-xl bg-emerald-600 py-3 font-semibold text-white hover:bg-emerald-700"
+        className="mt-4 w-full rounded-xl bg-primary py-3 font-semibold text-white transition-colors duration-200 hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none"
       >
         Next
       </button>
@@ -305,10 +316,11 @@ function FlagsStep(props: {
           <button
             key={f.field}
             onClick={() => setFlags((prev) => ({ ...prev, [f.field]: !prev[f.field] }))}
-            className={`flex items-center justify-between rounded-xl border p-3.5 text-left transition ${
+            aria-pressed={!!flags[f.field]}
+            className={`flex items-center justify-between rounded-xl border p-3.5 text-left transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none ${
               flags[f.field]
-                ? "border-emerald-500 bg-emerald-50"
-                : "border-slate-300 bg-white hover:border-emerald-400"
+                ? "border-primary bg-primary-soft"
+                : "border-slate-300 bg-white hover:border-primary/60"
             }`}
           >
             <span>
@@ -316,11 +328,13 @@ function FlagsStep(props: {
               {f.hint && <span className="block text-xs text-slate-500">{f.hint}</span>}
             </span>
             <span
-              className={`grid h-5 w-5 place-items-center rounded border text-xs text-white ${
-                flags[f.field] ? "border-emerald-600 bg-emerald-600" : "border-slate-300"
+              className={`grid h-5 w-5 place-items-center rounded border text-white ${
+                flags[f.field] ? "border-primary bg-primary" : "border-slate-300"
               }`}
             >
-              {flags[f.field] ? "✓" : ""}
+              {flags[f.field] && (
+                <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden="true" />
+              )}
             </span>
           </button>
         ))}
@@ -336,9 +350,10 @@ function FlagsStep(props: {
           props.onDone(updated);
         }}
         disabled={props.submitting}
-        className="mt-4 w-full rounded-xl bg-emerald-600 py-3 font-semibold text-white hover:bg-emerald-700 disabled:opacity-50"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 font-semibold text-white transition-colors duration-200 hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 motion-reduce:transition-none"
       >
-        {props.submitting ? "Checking…" : "See my schemes →"}
+        {props.submitting ? "Checking…" : "See my schemes"}
+        {!props.submitting && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
       </button>
     </div>
   );

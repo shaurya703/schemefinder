@@ -1,3 +1,4 @@
+import { ExternalLink, Square, TriangleAlert } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getScheme } from "../api";
@@ -49,7 +50,10 @@ export default function SchemeDetail() {
     return (
       <div className="py-20 text-center">
         <p className="text-rose-600">{error}</p>
-        <Link to="/browse" className="mt-3 inline-block font-semibold text-emerald-600">
+        <Link
+          to="/browse"
+          className="mt-3 inline-block rounded font-semibold text-primary hover:text-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        >
           ← Back to all schemes
         </Link>
       </div>
@@ -61,7 +65,10 @@ export default function SchemeDetail() {
 
   return (
     <div className="mx-auto max-w-2xl py-8">
-      <Link to="/browse" className="text-sm font-medium text-slate-500 hover:text-slate-700">
+      <Link
+        to="/browse"
+        className="rounded text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none"
+      >
         ← All schemes
       </Link>
 
@@ -81,7 +88,7 @@ export default function SchemeDetail() {
       <Section title="Benefits">
         <ul className="space-y-2">
           {scheme.benefits.map((b, i) => (
-            <li key={i} className="rounded-xl bg-emerald-50 p-3 text-sm font-medium text-emerald-900">
+            <li key={i} className="rounded-xl bg-primary-soft p-3 text-sm font-semibold text-primary-dark">
               {b.summary}
             </li>
           ))}
@@ -92,15 +99,15 @@ export default function SchemeDetail() {
         <ul className="list-inside space-y-1.5 text-sm text-slate-700">
           {rules.map((r, i) => (
             <li key={i} className="flex gap-2">
-              <span className="text-emerald-600">•</span>
+              <span className="text-primary" aria-hidden="true">•</span>
               <span className="capitalize">{ruleText(r)}</span>
             </li>
           ))}
           {scheme.eligibility.self_check.map((s, i) => (
             <li key={`sc-${i}`} className="flex gap-2">
-              <span className="text-amber-500">•</span>
+              <span className="text-amber-600" aria-hidden="true">•</span>
               <span>
-                {s} <span className="text-xs text-slate-400">(verify yourself)</span>
+                {s} <span className="text-xs text-slate-500">(verify yourself)</span>
               </span>
             </li>
           ))}
@@ -111,7 +118,8 @@ export default function SchemeDetail() {
         <ul className="grid gap-1.5 text-sm text-slate-700 sm:grid-cols-2">
           {scheme.required_documents.map((d) => (
             <li key={d} className="flex items-center gap-2">
-              <span className="text-slate-400">▢</span> {d}
+              <Square className="h-3.5 w-3.5 shrink-0 text-slate-400" aria-hidden="true" />
+              {d}
             </li>
           ))}
         </ul>
@@ -122,9 +130,10 @@ export default function SchemeDetail() {
           href={scheme.application_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-xl bg-emerald-600 px-6 py-3 text-center font-semibold text-white hover:bg-emerald-700"
+          className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-primary px-6 py-3 font-semibold text-white transition-colors duration-200 hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 motion-reduce:transition-none"
         >
-          Apply on official site ↗
+          Apply on official site
+          <ExternalLink className="h-4 w-4" aria-hidden="true" />
         </a>
         <span className="text-xs text-slate-500">
           Verified {scheme.last_verified} ·{" "}
@@ -139,9 +148,12 @@ export default function SchemeDetail() {
         </span>
       </div>
 
-      <p className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-3.5 text-xs text-amber-900">
-        Rules and amounts change — this entry is a verified snapshot. Confirm
-        the latest criteria on the official site before applying.
+      <p className="mt-6 flex items-start gap-2 rounded-xl border border-amber-300 bg-amber-50 p-3.5 text-sm text-amber-900">
+        <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+        <span>
+          Rules and amounts change — this entry is a verified snapshot. Confirm
+          the latest criteria on the official site before applying.
+        </span>
       </p>
     </div>
   );
