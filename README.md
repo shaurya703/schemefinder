@@ -1,5 +1,7 @@
 # SchemeFinder
 
+[![CI](https://github.com/shaurya703/schemefinder/actions/workflows/ci.yml/badge.svg)](https://github.com/shaurya703/schemefinder/actions/workflows/ci.yml)
+
 **Find the Indian government schemes you actually qualify for — in two minutes, with the reasons why.**
 
 India runs hundreds of scholarships, subsidies, pensions, insurance and loan schemes. The information exists, but it's scattered across dozens of portals, written in dense officialese, and organised by ministry rather than by *person*. The result is a discovery problem with real cost: an SC student who'd get her degree fees covered, a street vendor entitled to a ₹50,000 loan, or a 70-year-old who now gets free ₹5-lakh health cover often simply never find out.
